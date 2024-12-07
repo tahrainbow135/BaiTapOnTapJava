@@ -11,13 +11,13 @@ public class SinhVien implements Comparable<SinhVien> {
     }
     @Override
     public int compareTo(SinhVien sv) {
-        if (this.lop.equals(sv.lop)) {
+        if (this.lop.compareTo(sv.lop) == 0) {
             return this.msv.compareTo(sv.msv);
         }
-        return this.lop.compareTo(sv.hoten);
+        return this.lop.compareTo(sv.lop);
     }
     @Override
     public String toString() {
-        return msv + " " + hoten + " " + lop + " " + email + " " + sdt;
+        return msv + " " + hoten + " " + lop + " " + email + " " + this.sdt;
     }
 }
